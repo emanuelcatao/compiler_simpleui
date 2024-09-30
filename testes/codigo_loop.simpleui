@@ -1,0 +1,11 @@
+createWindow("Loop", width=640, height=480);
+
+let coisa = sprite();
+
+onKeypress("A") {
+    shiftElement("coisa", x=-10, y=0);
+}
+
+loop {
+    ## comentário aqui 
+} every 1000 ms;

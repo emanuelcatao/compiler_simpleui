@@ -1,0 +1,12 @@
+createWindow("Formulário", width=600, height=400);
+
+addElement(type="input", id="nome", placeholder="Digite seu nome", x=50, y=50);
+addElement(type="input", id="email", placeholder="Digite seu e-mail", x=50, y=100);
+addElement(type="button", text="Enviar", x=50, y=150);
+addElement(type="label", id="resultado", text="Aguardando submissão...", x=50, y=200);
+
+onClick("button") {
+    let nome = getProperty("nome", value);
+    let email = getProperty("email", value);
+    setProperty("resultado", text="Nome: " + nome + ", E-mail: " + email);
+}
