@@ -2,7 +2,7 @@ from enum import Enum
 
 class TokenClass(Enum):
     PALAVRA_RESERVADA = r"\b(let|function|if|else|repeat|times|loop|every|ms|createWindow|addElement|moveElement|shiftElement|showElement|hideElement|onKeypress|onClick|getProperty|setProperty)\b"
-    OPERADOR = r"(\+|\-|\/|\*|=|<|<=|>|>=)"
+    OPERADOR = r"(\+|\-|\/|\*|=|<|<=|>|>=|+=|\-=|\+\+|\-\-)"
     DELIMITADOR = r"(,|;|\(|\)|\.|\{|\})"
     IDENTIFICADOR = r"\b[a-zA-Z][a-zA-Z0-9]*\b"
     NUMERO = r"\b\d+(\.\d+)?\b"

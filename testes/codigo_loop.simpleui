@@ -7,5 +7,5 @@ onKeypress("A") {
 }
 
 loop {
-    ## comentário aqui 
+    ## comentario aqui 
 } every 1000 ms;
