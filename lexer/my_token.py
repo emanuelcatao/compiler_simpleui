@@ -1,13 +1,14 @@
 from enum import Enum
 
 class TokenClass(Enum):
-    PALAVRA_RESERVADA = r"\b(let|function|if|else|repeat|times|loop|every|ms|createWindow|addElement|moveElement|shiftElement|showElement|hideElement|onKeypress|onClick)\b"
-    OPERADOR = r"(\+|\-|\/|\*|=|#|<|<=|>|>=)"
+    PALAVRA_RESERVADA = r"\b(let|function|if|else|repeat|times|loop|every|ms|createWindow|addElement|moveElement|shiftElement|showElement|hideElement|onKeypress|onClick|getProperty|setProperty)\b"
+    OPERADOR = r"(\+|\-|\/|\*|=|<|<=|>|>=|+=|\-=|\+\+|\-\-)"
     DELIMITADOR = r"(,|;|\(|\)|\.|\{|\})"
     IDENTIFICADOR = r"\b[a-zA-Z][a-zA-Z0-9]*\b"
     NUMERO = r"\b\d+(\.\d+)?\b"
-    COMENTARIO = r"\{[^}]*\}"
+    COMENTARIO = r'##.*'
     ESPACO_EM_BRANCO = r"\s+"
+    STRING = r'(?<!")"(?!"")[^"]*"'
 
 class Token:
     def __init__(self, token_class, token_value, line, column):
