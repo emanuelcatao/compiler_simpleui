@@ -6,7 +6,7 @@ def create_automaton_palavra_reservada():
     q0 = afd.add_state('q0', is_initial=True)
     reserved_words = ["let", "function", "if", "else", "repeat", "times", "loop", "every", "ms", "createWindow",
                       "addElement", "moveElement", "shiftElement", "showElement", "hideElement", "onKeypress",
-                      "onClick", "getProperty", "setProperty"]
+                      "onClick", "getProperty", "setProperty", "sprite"]
 
     for word in reserved_words:
         current_state = q0

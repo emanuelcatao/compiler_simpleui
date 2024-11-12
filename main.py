@@ -1,13 +1,15 @@
 import os
+import json
 from lexer.lexer import lexer
 from utils.helpers import read_file
+from parser.parser import Parser
 
 def process_test_files():
     test_dir = "Testes"
-    
     test_files = [f for f in os.listdir(test_dir) if f.endswith('.simpleui')]
     
     if not test_files:
+        print("Nenhum arquivo de teste encontrado.")
         return
     
     for test_file in test_files:
@@ -15,16 +17,27 @@ def process_test_files():
         print(f"\nProcessando arquivo: {test_file}")
         
         code = read_file(full_path)
-
         tokens = lexer(code)
         
-        with open(f'output-{test_file}.md', 'w') as f:
-            f.write(f'| {"Classe do Token":<20} | {"Valor":<20} | {"Linha":<20} | {"Coluna":<20} |\n')
-            f.write(f'| {"-"*20:<20} | {"-"*20:<20} | {"-"*20:<20} | {"-"*20:<20} |\n')
-
+        print("\nTokens gerados pelo lexer:")
         for token in tokens:
-            with open(f'output-{test_file}.md', 'a') as f:
-                f.write(f'| {token.token_class.name:<20} | {token.token_value:<20} | {token.line:<20} | {token.column:<20} |\n')
+            print(f'{token.token_class.name:<20} {token.token_value:<20} (Linha: {token.line}, Coluna: {token.column})')
+        
+        parser = Parser(tokens)
+        try:
+            ast = parser.parse()
+            print("\nAST gerada pelo parser:")
+            print(json.dumps(ast, indent=4))
+            
+            output_filename = f"output-{test_file}"
+            parser.generate_ast_graph(ast, output_filename)
+
+            with open(f'output-{test_file}.json', 'w') as f:
+                json.dump(ast, f, indent=4)
+
+            
+        except SyntaxError as e:
+            print(f"Erro de sintaxe ao processar {test_file}: {e}")
 
 if __name__ == '__main__':
     process_test_files()

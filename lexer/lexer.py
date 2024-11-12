@@ -22,6 +22,16 @@ def lexer(code):
             token_start_line = current_line
             token_start_column = current_column
 
+            if code[position] == '-' and position + 1 < length and code[position + 1].isdigit():
+                lookahead += 1
+                while lookahead < length and code[lookahead].isdigit():
+                    lookahead += 1
+                lexeme = code[position:lookahead]
+                tokens.append(Token(TokenClass.NUMERO, lexeme, token_start_line, token_start_column))
+                position = lookahead
+                match_found = True
+                break
+
             while lookahead < length:
                 symbol = code[lookahead]
 
@@ -54,10 +64,6 @@ def lexer(code):
 
                 position = last_accepting_position
                 match_found = True
-
-                #if match_found and token_class == TokenClass.IDENTIFICADOR:
-                #    afd.plot("ident")
-                #    exit()
                 break
 
         if not match_found:
@@ -66,3 +72,4 @@ def lexer(code):
             raise SyntaxError(f"Erro léxico na linha {error_line}, coluna {error_column}: caractere inesperado: {code[position]!r}")
     
     return tokens
+
