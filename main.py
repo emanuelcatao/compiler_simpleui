@@ -3,9 +3,10 @@ import json
 from lexer.lexer import lexer
 from utils.helpers import read_file
 from parser.parser import Parser
+from analisador_semantico.semantic import SemanticAnalyzer
 
 def process_test_files():
-    test_dir = "Testes"
+    test_dir = "testes"
     test_files = [f for f in os.listdir(test_dir) if f.endswith('.simpleui')]
     
     if not test_files:
@@ -34,6 +35,19 @@ def process_test_files():
 
             with open(f'output-{test_file}.json', 'w') as f:
                 json.dump(ast, f, indent=4)
+
+            # análise semântica
+            print("\nExecutando Análise Semântica...")
+            semantic_analyzer = SemanticAnalyzer()   
+            try:
+                symbol_table = semantic_analyzer.analyze(ast)
+                print("Análise semântica concluída com sucesso!")
+
+                print("\nTabela de símbolos gerada:")
+                print(json.dumps(symbol_table, indent=4))
+                
+            except ValueError as ve:
+                print(f"Erro semântico ao processar {test_file}: {ve}")
 
             
         except SyntaxError as e:
