@@ -1,5 +1,7 @@
 # Compiler SimpleUI
 
+Projeto Desenvolvido por Luccas Castro e Emanuel Catão
+
 ## Overview
 
 SimpleUI é uma linguagem de programação desenvolvida para abstrair a complexidade do GTK, permitindo a criação rápida de interfaces gráficas. O compilador, escrito em Python, transpila código SimpleUI para C + GTK, tornando o desenvolvimento de GUIs mais acessível e intuitivo.
