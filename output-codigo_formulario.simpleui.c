@@ -8,14 +8,6 @@ GtkWidget *widget_email;
 GtkWidget *widget_button_3;
 GtkWidget *widget_resultado;
 
-static void on_click_button_3(GtkWidget *widget, gpointer data) {
-    const char* nome = gtk_entry_get_text(GTK_ENTRY(widget_nome));
-    const char* email = gtk_entry_get_text(GTK_ENTRY(widget_email));
-    char buffer[1024];
-    sprintf(buffer, "%s%s%s", "Nome: ", nome, ", E-mail ", email);
-    gtk_label_set_text(GTK_LABEL(widget_resultado), buffer);
-}
-
 static void activate(GtkApplication *app, gpointer user_data) {
     GtkWidget *window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW(window), "Formulario");

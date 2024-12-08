@@ -3,15 +3,20 @@
 #include <string.h>
 
 // Widgets globais
+GtkWidget *widget_coisa;
+
+// Variáveis globais
 char* coisa = "oi";
 
 static gboolean on_key_press(GtkWidget *widget, GdkEventKey *event, gpointer data) {
     switch(event->keyval) {
         case GDK_KEY_A:
-            GtkFixed *fixed = GTK_FIXED(gtk_widget_get_parent(widget_coisa));
-            gint x, y;
-            gtk_fixed_get_child_position(fixed, widget_coisa, &x, &y);
-            gtk_fixed_move(fixed, widget_coisa, x + -10, y + 0);
+            {
+                GtkFixed *fixed = GTK_FIXED(gtk_widget_get_parent(widget_coisa));
+                GtkAllocation allocation;
+                gtk_widget_get_allocation(widget_coisa, &allocation);
+                gtk_fixed_move(fixed, widget_coisa, allocation.x + -10, allocation.y + 0);
+            }
             break;
     }
     return FALSE;
@@ -23,6 +28,8 @@ static void activate(GtkApplication *app, gpointer user_data) {
     gtk_window_set_default_size(GTK_WINDOW(window), 640, 480);
     GtkWidget *fixed = gtk_fixed_new();
     gtk_container_add(GTK_CONTAINER(window), fixed);
+    widget_coisa = gtk_label_new("oi");
+    gtk_fixed_put(GTK_FIXED(fixed), widget_coisa, 50, 50);
     g_signal_connect(window, "key-press-event", G_CALLBACK(on_key_press), NULL);
     gtk_widget_show_all(window);
 }

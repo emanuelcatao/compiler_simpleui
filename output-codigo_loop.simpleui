@@ -1,38 +1,38 @@
 // AST
 digraph {
-	"4e5d2260-ca59-4c8b-8422-c776343f426f" [label=Program]
-	"4418059f-c67e-491c-a377-654d58760a37" [label=List]
-	"4e5d2260-ca59-4c8b-8422-c776343f426f" -> "4418059f-c67e-491c-a377-654d58760a37"
-	"fc411426-e0c6-4009-bb95-4094eba1046c" [label=createWindow]
-	"4418059f-c67e-491c-a377-654d58760a37" -> "fc411426-e0c6-4009-bb95-4094eba1046c"
-	"2bb26075-f7a0-43b1-8930-24b949cbad8f" [label="node"]
-	"fc411426-e0c6-4009-bb95-4094eba1046c" -> "2bb26075-f7a0-43b1-8930-24b949cbad8f"
-	"1d2e31e8-6ef8-411d-ac70-84c773b3e818" [label="\"Loop\""]
-	"2bb26075-f7a0-43b1-8930-24b949cbad8f" -> "1d2e31e8-6ef8-411d-ac70-84c773b3e818"
-	"04ccce4d-4f86-428e-84f0-54b89f90e2cc" [label=640]
-	"2bb26075-f7a0-43b1-8930-24b949cbad8f" -> "04ccce4d-4f86-428e-84f0-54b89f90e2cc"
-	"b0dddd8d-b975-4e79-b4df-14b806cd919b" [label=480]
-	"2bb26075-f7a0-43b1-8930-24b949cbad8f" -> "b0dddd8d-b975-4e79-b4df-14b806cd919b"
-	"c9f799cb-efa7-403a-85c3-57bbd5ed5ebd" [label=variable_assignment]
-	"4418059f-c67e-491c-a377-654d58760a37" -> "c9f799cb-efa7-403a-85c3-57bbd5ed5ebd"
-	"0f08ef56-b3b0-4975-8353-b02c8fb5eb79" [label=coisa]
-	"c9f799cb-efa7-403a-85c3-57bbd5ed5ebd" -> "0f08ef56-b3b0-4975-8353-b02c8fb5eb79"
-	"63570ead-9b7a-48ed-bc10-df89c2db7aa0" [label=string]
-	"c9f799cb-efa7-403a-85c3-57bbd5ed5ebd" -> "63570ead-9b7a-48ed-bc10-df89c2db7aa0"
-	"dc8d6462-78a1-4260-9e38-c2bb69d72140" [label="\"oi\""]
-	"63570ead-9b7a-48ed-bc10-df89c2db7aa0" -> "dc8d6462-78a1-4260-9e38-c2bb69d72140"
-	"52239946-fde5-49f9-8830-0eb35386f753" [label=onKeypress]
-	"4418059f-c67e-491c-a377-654d58760a37" -> "52239946-fde5-49f9-8830-0eb35386f753"
-	"ba623018-b258-491d-a1f6-09ac68d7ecb3" [label="\"A\""]
-	"52239946-fde5-49f9-8830-0eb35386f753" -> "ba623018-b258-491d-a1f6-09ac68d7ecb3"
-	"8d0ce2a5-582a-4366-85f2-cb7f075df53d" [label=List]
-	"52239946-fde5-49f9-8830-0eb35386f753" -> "8d0ce2a5-582a-4366-85f2-cb7f075df53d"
-	"43bf6810-a894-4134-be51-e1b715284393" [label=shiftElement]
-	"8d0ce2a5-582a-4366-85f2-cb7f075df53d" -> "43bf6810-a894-4134-be51-e1b715284393"
-	"ef1cc0db-dd1c-48fe-a752-e71cc41154a0" [label="\"coisa\""]
-	"43bf6810-a894-4134-be51-e1b715284393" -> "ef1cc0db-dd1c-48fe-a752-e71cc41154a0"
-	"9bf6a3d7-bcbc-4315-a365-ea81426a1c1b" [label=-10]
-	"43bf6810-a894-4134-be51-e1b715284393" -> "9bf6a3d7-bcbc-4315-a365-ea81426a1c1b"
-	"5afe97fd-372d-409b-8eab-492d52051db4" [label=0]
-	"43bf6810-a894-4134-be51-e1b715284393" -> "5afe97fd-372d-409b-8eab-492d52051db4"
+	"c03786bd-c3dc-4990-8ac0-fd0f1fbf5428" [label=Program]
+	"35a1ef9e-ac69-473d-b16a-75f563fab60d" [label=List]
+	"c03786bd-c3dc-4990-8ac0-fd0f1fbf5428" -> "35a1ef9e-ac69-473d-b16a-75f563fab60d"
+	"706194ee-00e5-4ed1-babf-38e93df3cdbd" [label=createWindow]
+	"35a1ef9e-ac69-473d-b16a-75f563fab60d" -> "706194ee-00e5-4ed1-babf-38e93df3cdbd"
+	"14e3e9d6-c45c-469d-a6e9-635619087f66" [label="node"]
+	"706194ee-00e5-4ed1-babf-38e93df3cdbd" -> "14e3e9d6-c45c-469d-a6e9-635619087f66"
+	"d53186e5-9aae-481b-8ad0-fbe1ca3e4e54" [label="\"Loop\""]
+	"14e3e9d6-c45c-469d-a6e9-635619087f66" -> "d53186e5-9aae-481b-8ad0-fbe1ca3e4e54"
+	"58bbaf72-5875-4887-9754-058c2ebc1353" [label=640]
+	"14e3e9d6-c45c-469d-a6e9-635619087f66" -> "58bbaf72-5875-4887-9754-058c2ebc1353"
+	"e31beeaf-83b2-45d6-b17a-bcf50904f170" [label=480]
+	"14e3e9d6-c45c-469d-a6e9-635619087f66" -> "e31beeaf-83b2-45d6-b17a-bcf50904f170"
+	"2fa8ffd5-0c24-43a7-b6c9-c07e281c9a89" [label=variable_assignment]
+	"35a1ef9e-ac69-473d-b16a-75f563fab60d" -> "2fa8ffd5-0c24-43a7-b6c9-c07e281c9a89"
+	"6f1fe5e0-88dc-47f9-8779-20496e9d01d8" [label=coisa]
+	"2fa8ffd5-0c24-43a7-b6c9-c07e281c9a89" -> "6f1fe5e0-88dc-47f9-8779-20496e9d01d8"
+	"7bf5ecb2-9962-42e9-a877-738504b9b6a5" [label=string]
+	"2fa8ffd5-0c24-43a7-b6c9-c07e281c9a89" -> "7bf5ecb2-9962-42e9-a877-738504b9b6a5"
+	"ab6f95a4-544c-4fce-bd0d-c5609fe8517d" [label="\"oi\""]
+	"7bf5ecb2-9962-42e9-a877-738504b9b6a5" -> "ab6f95a4-544c-4fce-bd0d-c5609fe8517d"
+	"73c2c9cc-8395-41fe-a605-2579b12fda82" [label=onKeypress]
+	"35a1ef9e-ac69-473d-b16a-75f563fab60d" -> "73c2c9cc-8395-41fe-a605-2579b12fda82"
+	"8bbbae76-d8d7-48c3-bd18-42bb2eac329a" [label="\"A\""]
+	"73c2c9cc-8395-41fe-a605-2579b12fda82" -> "8bbbae76-d8d7-48c3-bd18-42bb2eac329a"
+	"cfe0ea35-e009-46a6-a9b4-a73c1579b9ec" [label=List]
+	"73c2c9cc-8395-41fe-a605-2579b12fda82" -> "cfe0ea35-e009-46a6-a9b4-a73c1579b9ec"
+	"431ce3a6-9c45-48c2-8da0-38ab42da0cf4" [label=shiftElement]
+	"cfe0ea35-e009-46a6-a9b4-a73c1579b9ec" -> "431ce3a6-9c45-48c2-8da0-38ab42da0cf4"
+	"99e106be-6640-4932-96e7-fe6623c9a2f8" [label="\"coisa\""]
+	"431ce3a6-9c45-48c2-8da0-38ab42da0cf4" -> "99e106be-6640-4932-96e7-fe6623c9a2f8"
+	"07070c8a-e6eb-45f9-9b80-91ce22f8b94a" [label=-10]
+	"431ce3a6-9c45-48c2-8da0-38ab42da0cf4" -> "07070c8a-e6eb-45f9-9b80-91ce22f8b94a"
+	"4ea42d54-2ab7-4f81-9267-cf31334073bf" [label=0]
+	"431ce3a6-9c45-48c2-8da0-38ab42da0cf4" -> "4ea42d54-2ab7-4f81-9267-cf31334073bf"
 }
