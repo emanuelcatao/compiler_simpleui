@@ -1,0 +1,95 @@
+{
+    "type": "Program",
+    "body": [
+        {
+            "type": "createWindow",
+            "attributes": {
+                "title": "\"Formulario\"",
+                "width": 600,
+                "height": 400
+            }
+        },
+        {
+            "type": "addElement",
+            "attributes": {
+                "type": "\"input\"",
+                "id": "\"nome\"",
+                "placeholder": "\"Digite seu nome\"",
+                "x": 50,
+                "y": 50
+            }
+        },
+        {
+            "type": "addElement",
+            "attributes": {
+                "type": "\"input\"",
+                "id": "\"email\"",
+                "placeholder": "\"Digite seu e-mail\"",
+                "x": 50,
+                "y": 100
+            }
+        },
+        {
+            "type": "addElement",
+            "attributes": {
+                "type": "\"button\"",
+                "text": "\"Enviar\"",
+                "x": 50,
+                "y": 150
+            }
+        },
+        {
+            "type": "addElement",
+            "attributes": {
+                "type": "\"label\"",
+                "id": "\"resultado\"",
+                "text": "\"Aguardando submissao...\"",
+                "x": 50,
+                "y": 200
+            }
+        },
+        {
+            "type": "onClick",
+            "target": "\"button\"",
+            "actions": [
+                {
+                    "type": "variable_assignment",
+                    "name": "nome",
+                    "value": {
+                        "type": "function_call",
+                        "name": "getProperty",
+                        "arguments": [
+                            "\"nome\"",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "type": "variable_assignment",
+                    "name": "email",
+                    "value": {
+                        "type": "function_call",
+                        "name": "getProperty",
+                        "arguments": [
+                            "\"email\"",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "type": "setProperty",
+                    "element_id": "\"resultado\"",
+                    "expression": [
+                        "\"Nome: \"",
+                        "+",
+                        "nome",
+                        "+",
+                        "\", E-mail \"",
+                        "+",
+                        "email"
+                    ]
+                }
+            ]
+        }
+    ]
+}

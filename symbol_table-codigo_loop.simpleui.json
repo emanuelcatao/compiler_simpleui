@@ -1,0 +1,29 @@
+{
+    "elements": {},
+    "events": {
+        "keypress": {
+            "A": {
+                "type": "onKeypress",
+                "actions": [
+                    {
+                        "type": "shiftElement",
+                        "element_id": "\"coisa\"",
+                        "x": -10,
+                        "y": 0
+                    }
+                ]
+            }
+        }
+    },
+    "variables": {
+        "coisa": {
+            "type": "string",
+            "value": "\"oi\""
+        }
+    },
+    "window": {
+        "title": "\"Loop\"",
+        "width": 640,
+        "height": 480
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "type": "Program",
+    "body": [
+        {
+            "type": "createWindow",
+            "attributes": {
+                "title": "\"Loop\"",
+                "width": 640,
+                "height": 480
+            }
+        },
+        {
+            "type": "variable_assignment",
+            "name": "coisa",
+            "value": {
+                "type": "string",
+                "value": "\"oi\""
+            }
+        },
+        {
+            "type": "onKeypress",
+            "key": "\"A\"",
+            "actions": [
+                {
+                    "type": "shiftElement",
+                    "element_id": "\"coisa\"",
+                    "x": -10,
+                    "y": 0
+                }
+            ]
+        }
+    ]
+}

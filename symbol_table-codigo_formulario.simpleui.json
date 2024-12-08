@@ -1,0 +1,106 @@
+{
+    "elements": {
+        "nome": {
+            "type": "input",
+            "attributes": {
+                "type": "\"input\"",
+                "id": "\"nome\"",
+                "placeholder": "\"Digite seu nome\"",
+                "x": 50,
+                "y": 50
+            },
+            "actions": []
+        },
+        "email": {
+            "type": "input",
+            "attributes": {
+                "type": "\"input\"",
+                "id": "\"email\"",
+                "placeholder": "\"Digite seu e-mail\"",
+                "x": 50,
+                "y": 100
+            },
+            "actions": []
+        },
+        "button_3": {
+            "type": "button",
+            "attributes": {
+                "type": "\"button\"",
+                "text": "\"Enviar\"",
+                "x": 50,
+                "y": 150
+            },
+            "actions": []
+        },
+        "resultado": {
+            "type": "label",
+            "attributes": {
+                "type": "\"label\"",
+                "id": "\"resultado\"",
+                "text": "\"Aguardando submissao...\"",
+                "x": 50,
+                "y": 200
+            },
+            "actions": [],
+            "last_set_property": [
+                "\"Nome: \"",
+                "+",
+                "nome",
+                "+",
+                "\", E-mail \"",
+                "+",
+                "email"
+            ]
+        }
+    },
+    "events": {
+        "button_3": {
+            "type": "onClick",
+            "actions": [
+                {
+                    "type": "variable_assignment",
+                    "name": "nome",
+                    "value": {
+                        "type": "function_call",
+                        "name": "getProperty",
+                        "arguments": [
+                            "\"nome\"",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "type": "variable_assignment",
+                    "name": "email",
+                    "value": {
+                        "type": "function_call",
+                        "name": "getProperty",
+                        "arguments": [
+                            "\"email\"",
+                            "value"
+                        ]
+                    }
+                },
+                {
+                    "type": "setProperty",
+                    "element_id": "\"resultado\"",
+                    "expression": [
+                        "\"Nome: \"",
+                        "+",
+                        "nome",
+                        "+",
+                        "\", E-mail \"",
+                        "+",
+                        "email"
+                    ]
+                }
+            ]
+        }
+    },
+    "variables": {},
+    "window": {
+        "title": "\"Formulario\"",
+        "width": 600,
+        "height": 400
+    }
+}
